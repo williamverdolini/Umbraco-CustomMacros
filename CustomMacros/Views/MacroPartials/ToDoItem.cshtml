@@ -1,0 +1,5 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using CustomMacros.Areas.Sample.Controllers;
+@using Umbraco.Web;
+
+@Html.Action("Init", "ToDoItem", new { area = "Sample", macroParameters = Model.MacroParameters })

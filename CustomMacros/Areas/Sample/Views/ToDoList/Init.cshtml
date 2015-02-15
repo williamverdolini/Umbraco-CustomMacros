@@ -1,0 +1,14 @@
+﻿@model IList<CustomMacros.Areas.Sample.Models.ToDoListViewModel>
+
+@using ClientDependency.Core.Mvc;
+
+@{
+    Html
+     .RequiresJs(Url.Action("JsConfiguration", "ToDoList", new { area = "Sample"}))
+     .RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js")
+     .RequiresJs("~/Areas/Sample/Scripts/ToDoList.js")
+     .RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css")
+     .RequiresCss("~/Areas/Sample/Scripts/ToDoList.css");
+}
+
+@Html.Partial("Handle")

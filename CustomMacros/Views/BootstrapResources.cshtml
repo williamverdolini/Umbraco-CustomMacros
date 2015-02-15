@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ClientDependency.Core.Mvc
+
+@{
+    Layout = "BootstrapMaster.cshtml";
+
+    Html
+     .RequiresJs("~/Areas/Framework/Scripts/Command.Engine.js");
+    //Html
+	//  .RequiresCss("~/css/main-h2.css");
+
+}
+
+
+@section HeadMaster{
+    <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,400italic,700italic|Source+Sans+Pro:400,700|Andika|Asap:400,700|Antic|Scada:400,700|Hammersmith+One|Varela|Open+Sans:400,700|Actor|Chivo:400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    @Html.RenderCssHere()
+    @Html.RenderJsHere()
+    @RenderSection("HeadMaster2", true)
+}
+
+@section ContentMaster{
+    @Html.Action("CultureInfo", "PageInit", new { area = "Framework" })
+    @Html.Action("PageViewStyle", "PageInit", new { area = "Framework" })
+    @RenderSection("ContentMaster2", true)
+}

@@ -1,0 +1,65 @@
+﻿@model IList<CustomMacros.Areas.Sample.Models.ToDoListViewModel>
+@using CustomMacros.Areas.Infrastructure.Helpers;
+@using CustomMacros.Areas.Sample.Controllers;
+@using CustomMacros.Areas.Sample.Commands;
+
+@using (Html.Container())
+{
+    var CommandsProvider = (ViewContext.Controller as ToDoListController).CommandsProvider;
+
+    if (Model.Count > 0)
+    {        
+        <table id="TodoListTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#  @OrderButton("id")</th>
+                    <th>Title @OrderButton("Title")</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var list in Model)
+                {
+                    SelectToDoListCommand selCommand = CommandsProvider.Create<SelectToDoListCommand>();
+                    selCommand.ToDoListId = "'" + list.id + "'";
+
+                    <tr>
+                        <td>@list.id</td>
+                        <td>@list.Title</td>
+                        <td>@list.Description</td>
+                        <td>
+                            <button type="button" class="btn btn-default btn-sm"
+                                    onclick="CustomMacros.commands.fire(@Html.JsCommand(selCommand))">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+}
+
+
+@helper OrderButton(string fieldName)
+{
+    var CommandsProvider = (ViewContext.Controller as ToDoListController).CommandsProvider;
+    OrderToDoListsCommand orderBy = CommandsProvider.Create<OrderToDoListsCommand>();
+    orderBy.FieldName = "'" + fieldName + "'";
+    bool isAscending = (fieldName.Equals(ViewBag.SortedFieldname) ? ViewBag.IsAscending : true);
+    orderBy.IsAscending = "'" + isAscending + "'";
+
+
+    string buttonClass = fieldName.Equals(ViewBag.SortedFieldname) ? "btn btn-primary btn-xs" : "btn btn-default btn-xs";
+    string iconClass = fieldName.Equals(ViewBag.SortedFieldname) ?
+        (isAscending ? "glyphicon glyphicon-chevron-down" : "glyphicon glyphicon-chevron-up") :
+        "glyphicon glyphicon-sort";
+
+        <button onclick="CustomMacros.commands.fire(@Html.JsCommand(orderBy))"
+                class="@buttonClass">
+            <span class="@iconClass" aria-hidden="true"></span>
+        </button>
+}
+

@@ -1,0 +1,38 @@
+﻿@model CustomMacros.Areas.Sample.Models.ToDoListViewModel
+@using CustomMacros.Areas.Infrastructure.Helpers;
+@using CustomMacros.Areas.Sample.Controllers;
+@using CustomMacros.Areas.Sample.Commands;
+
+@using (Html.Container())
+{
+    if (ViewBag.IsSelectedList)
+    {
+        <h2>@Model.Title</h2>
+        <h4>@Model.Description</h4>
+
+        @*<h4 ng-show="local.todoItems.length>0"><span class="label label-danger">Open Tasks</span></h4>*@
+        <table id="TodoListTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th style="width:55%">Description</th>
+                    <th style="width:10%">Importance</th>
+                    <th style="width:15%">Due Date</th>
+                    @*<th>Status</th>*@
+                    <!--<th></th>-->
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr data-ng-repeat="todo in local.todoItems | filter:{ Status: 'Open' } |orderBy:'-Importance'">
+                        <td>@item.Id</td>
+                        <td>@item.Description</td>
+                        <td>@item.Importance</td>
+                        <td>@item.DueDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
