@@ -6,6 +6,8 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using CustomMacros.Areas.Infrastructure.Injection.MVC;
+using CustomMacros.Areas.Infrastructure.Services;
+using CustomMacros.Areas.Infrastructure.Services.PopulateData;
 using Umbraco.Core;
 
 namespace CustomMacros.App_Start
@@ -20,7 +22,13 @@ namespace CustomMacros.App_Start
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
             // see: http://our.umbraco.org/documentation/reference/Templating/Mvc/using-ioc
-            BootstrapDIContainer();
+            container = BootstrapDIContainer();
+
+            CustomMacrosSetup
+                .Create()
+                .RegisterInizializationService(container.Resolve<IPopulateInitialData>() as IInitializationService)
+                .InitializeServices();
+
             // DI Container's Dispose at the end of the Umbraco Application
             umbracoApplication.Disposed += new EventHandler((object sender, EventArgs e) => { container.Dispose(); });
         }
@@ -28,9 +36,9 @@ namespace CustomMacros.App_Start
         /// <summary>
         /// DI Container Bootstrap and install of Windsor Installer
         /// </summary>
-        private static void BootstrapDIContainer()
+        private IWindsorContainer BootstrapDIContainer()
         {
-            container = new WindsorContainer()
+            IWindsorContainer container = new WindsorContainer()
                 .Install(
                     FromAssembly.InDirectory(new AssemblyFilter(AssemblyDirectory))
                     );
@@ -42,7 +50,9 @@ namespace CustomMacros.App_Start
                // http://bradwilson.typepad.com/blog/2010/10/service-location-pt10-controller-activator.html (read comments)
                // http://mikehadlow.blogspot.com/2011/02/mvc-30-idependencyresolver-interface-is.html
                // http://kozmic.pl/2010/08/19/must-windsor-track-my-components/
-            ControllerBuilder.Current.SetControllerFactory(controllerFactory);        
+            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+
+            return container;
         }
 
 

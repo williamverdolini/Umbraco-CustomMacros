@@ -129,6 +129,7 @@
       <HintPath>..\packages\UmbracoCms.Core.6.2.4\lib\System.Data.SqlServerCe.Entity.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -271,9 +272,10 @@
     <Compile Include="Areas\Infrastructure\Injection\Installers\ControllersInstaller.cs" />
     <Compile Include="Areas\Infrastructure\Injection\MVC\WindsorActionInvoker.cs" />
     <Compile Include="Areas\Infrastructure\Injection\MVC\WindsorControllerFactory.cs" />
+    <Compile Include="Areas\Infrastructure\Injection\ServicesInstaller.cs" />
     <Compile Include="Areas\Infrastructure\Models\Exceptions\SessionExpiredException.cs" />
-    <Compile Include="Areas\Infrastructure\Services\IApplicationServices.cs" />
-    <Compile Include="Areas\Infrastructure\Services\WiNicSetup.cs" />
+    <Compile Include="Areas\Infrastructure\Services\IInitializationServices.cs" />
+    <Compile Include="Areas\Infrastructure\Services\CustomMacrosSetup.cs" />
     <Compile Include="Areas\Sample\Commands\ArchiveToDoListCommand.cs" />
     <Compile Include="Areas\Sample\Commands\OrderToDoListsCommand.cs" />
     <Compile Include="Areas\Sample\Commands\SelectToDoListCommand.cs" />
@@ -292,6 +294,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Infrastructure\Services\PopulateData\CustomMacros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomMacros.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Infrastructure\Services\PopulateData\IPopulateInitialData.cs" />
+    <Compile Include="Areas\Infrastructure\Services\PopulateData\PopulateInitialData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -368,7 +377,9 @@
     <Content Include="config\Dashboard.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config\ClientDependency.config" />
+    <Content Include="config\ClientDependency.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\BaseRestExtensions.config" />
@@ -412,6 +423,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\MacroPartials\ToDoItem.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\Infrastructure\Services\PopulateData\CustomMacros.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomMacros.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
