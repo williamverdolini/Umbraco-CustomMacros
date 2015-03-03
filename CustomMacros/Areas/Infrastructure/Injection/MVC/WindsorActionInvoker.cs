@@ -22,7 +22,9 @@ namespace CustomMacros.Areas.Infrastructure.Injection.MVC
         {
             foreach (IActionFilter actionFilter in filters)
             {
-                kernel.InjectProperties(actionFilter);
+                //Inject Properties in all the filters but global filters (already injected by Windsor's Controller Factory)
+                if (!typeof(Infrastructure.Controllers.MacroController).IsAssignableFrom(actionFilter.GetType()))
+                    kernel.InjectProperties(actionFilter);
             }
             return base.BeginInvokeActionMethodWithFilters(controllerContext, filters, actionDescriptor, parameters, callback, state);
         }
