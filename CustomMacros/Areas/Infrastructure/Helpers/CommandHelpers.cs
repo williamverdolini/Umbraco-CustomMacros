@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using CustomMacros.Areas.Framework.Commons;
 using CustomMacros.Areas.Infrastructure.Commands;
+using CustomMacros.Areas.Infrastructure.Controllers;
 
 namespace CustomMacros.Areas.Infrastructure.Helpers
 {
@@ -20,5 +22,22 @@ namespace CustomMacros.Areas.Infrastructure.Helpers
             retStr += "})";
             return new MvcHtmlString(retStr);
         }
+
+        public static MvcHtmlString JsCommandsConfiguration(this HtmlHelper htmlHelper)
+        {
+            if (!(htmlHelper.ViewContext.Controller is MacroController))
+                throw new Exception("Controller is NOT a MacroController. It's NOT Possibile to use HtmlHelper.JsCommandsConfiguration");
+
+            var controller = htmlHelper.ViewContext.Controller as MacroController;
+
+            //htmlHelper.Action("JsConfig", "LoginService", new { area = "Business", ModuleId = (ViewContext.Controller as eice.framework.Areas.Infrastructure.Controllers.WiNicBaseController).GetUniqueId() })
+            string result = string.Empty;
+            string jsConfiguration = controller.JsConfig();
+            if (!string.IsNullOrEmpty(jsConfiguration))
+                result = "<script type=\"text/javascript\">" + jsConfiguration + "</script>";
+
+            return new MvcHtmlString(result);
+        }
+
     }
 }

@@ -50,6 +50,11 @@ namespace CustomMacros.Areas.Infrastructure.Controllers
             return pageService.GetCultureInfo(PageAbsolutePath).TwoLetterISOLanguageName;
         }
         public bool IsCustomPostBack { get; set; }
+        public string JsConfig()
+        {
+            return SetCommandListeners();
+        }
+
         #endregion
 
         #region Global Filters
@@ -61,11 +66,6 @@ namespace CustomMacros.Areas.Infrastructure.Controllers
         #endregion
 
         #region Actions
-        public ActionResult JsConfiguration(string ModuleId)
-        {
-            return JavaScript(SetEventListeners());
-        }
-
         [MapToView]
         [PopulateMacroProperties(Order = 10)]
         public ActionResult Init(IDictionary<string, object> MacroParameters)
@@ -107,18 +107,18 @@ namespace CustomMacros.Areas.Infrastructure.Controllers
             return actionUrl;
         }
 
-        private string SetEventListeners()
+        private string SetCommandListeners()
         {
-            string jqGetEvent = "";
+            string jqGetCommand = "";
             string macroName = MacroId;
             string divResult = macroName + "_main";
             string divLoading = macroName + "_loading";
 
             string _actionUrl = GetExecuteActionUrl();
 
-            jqGetEvent += "\n";
-            jqGetEvent += Utilities.GetJsCommandsListener(CommandsConsumer, macroName);
-            jqGetEvent += "\n" +
+            jqGetCommand += "\n";
+            jqGetCommand += Utilities.GetJsCommandsListener(CommandsConsumer, macroName);
+            jqGetCommand += "\n" +
                             "window['" + macroName + "'] = {};\n" +
                             "window['" + macroName + "'].fireAjax = function (moduleName, commandSet) {\n" +
                             "  if($('." + divResult + ":first').length>0) {\n" +
@@ -129,13 +129,13 @@ namespace CustomMacros.Areas.Infrastructure.Controllers
                             "    $.extend(data, commandSet);\n";
 
             if (Utilities.CastBool(PopupMode))
-                jqGetEvent += "    CustomMacros.ajax.executeInPopup(data, '" + _actionUrl + "', window['" + macroName + "_dialog']); " + "\n";
+                jqGetCommand += "    CustomMacros.ajax.executeInPopup(data, '" + _actionUrl + "', window['" + macroName + "_dialog']); " + "\n";
             else
-                jqGetEvent += "    CustomMacros.ajax.execute(data, '" + _actionUrl + "'); " + "\n";
-            jqGetEvent += "  }\n" +
+                jqGetCommand += "    CustomMacros.ajax.execute(data, '" + _actionUrl + "'); " + "\n";
+            jqGetCommand += "  }\n" +
                             "}\n";
 
-            return (CommandsConsumer.Count > 0) ? jqGetEvent : string.Empty;
+            return (CommandsConsumer.Count > 0) ? jqGetCommand : string.Empty;
         }
 
         private bool GetIsCustomPostBack(string ActionName)

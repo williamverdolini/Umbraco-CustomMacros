@@ -1,10 +1,8 @@
 ﻿@model CustomMacros.Areas.Sample.Models.ToDoListViewModel
 
 @using ClientDependency.Core.Mvc;
+@using CustomMacros.Areas.Infrastructure.Helpers;
 
-@{
-    Html
-     .RequiresJs(Url.Action("JsConfiguration", "ToDoItem", new { area = "Sample" }));
-}
 
+@Html.JsCommandsConfiguration()
 @Html.Partial("Handle")
