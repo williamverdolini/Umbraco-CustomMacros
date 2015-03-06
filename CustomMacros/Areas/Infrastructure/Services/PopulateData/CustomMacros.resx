@@ -233,7 +233,7 @@ INSERT INTO [dbo].[cmsContent] ([pk], [nodeId], [contentType]) VALUES (1, 1049, 
 INSERT INTO [dbo].[cmsContent] ([pk], [nodeId], [contentType]) VALUES (2, 1050, 1046)
 INSERT INTO [dbo].[cmsContent] ([pk], [nodeId], [contentType]) VALUES (3, 1051, 1046)
 SET IDENTITY_INSERT [dbo].[cmsContent] OFF
-INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1049, N'&lt;Page id="1049" parentID="-1" level="1" creatorID="0" sortOrder="1" createDate="2015-02-01T16:03:19" updateDate="2015-02-14T18:28:36" nodeName="Umbraco-MVC-Modal" urlName="umbraco-mvc-modal" path="-1,1049" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
+INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1049, N'&lt;Page id="1049" parentID="-1" level="1" creatorID="0" sortOrder="1" createDate="2015-02-01T16:03:19" updateDate="2015-03-06T00:14:49" nodeName="Umbraco-MVC-Modal" urlName="umbraco-mvc-modal" path="-1,1049" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
   &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
 &lt;div class="panel-heading"&gt;
 &lt;h3&gt;Modal Macro&lt;/h3&gt;
@@ -245,7 +245,7 @@ INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1049, N'&lt;Page id=
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;?UMBRACO_MACRO macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="1" macroAlias="Sample.ToDoList" /&gt;
 &lt;?UMBRACO_MACRO popupmode="true" macroAlias="Sample.ToDoItem" /&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
@@ -290,7 +290,7 @@ INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1050, N'&lt;Page id=
 &lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;]]&gt;&lt;/navbar&gt;
 &lt;/Page&gt;')
-INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1051, N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-02-15T11:09:41" nodeName="Umbraco-MVC-Page" urlName="umbraco-mvc-page" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
+INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1051, N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-03-06T14:00:20" nodeName="Umbraco-MVC-Page" urlName="umbraco-mvc-page" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
   &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
 &lt;div class="panel-heading"&gt;
 &lt;h3&gt;In-Page Macro&lt;/h3&gt;
@@ -303,7 +303,7 @@ INSERT INTO [dbo].[cmsContentXml] ([nodeId], [xml]) VALUES (1051, N'&lt;Page id=
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;?UMBRACO_MACRO macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="0" macroAlias="Sample.ToDoList" /&gt;
 &lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
@@ -366,6 +366,10 @@ INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionD
 INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (43, 1049, N'b03cf8fa-2ec1-4519-b227-a0c3d6238b2e', '20150214 18:28:36.747', NULL)
 INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (44, 1051, N'494d75a2-aed2-4b51-aa05-59914c9890a5', '20150214 18:29:06.697', NULL)
 INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (45, 1051, N'90e5aecb-9142-442c-a73f-010ff6989915', '20150215 11:09:41.377', NULL)
+INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (46, 1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', '20150305 23:49:38.893', NULL)
+INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (47, 1051, N'f6590f18-534f-4016-a509-82f94d126b3f', '20150306 00:14:11.480', NULL)
+INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (48, 1049, N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', '20150306 00:14:49.477', NULL)
+INSERT INTO [dbo].[cmsContentVersion] ([id], [ContentId], [VersionId], [VersionDate], [LanguageLocale]) VALUES (49, 1051, N'0afaac69-d72d-46ae-9781-4bb335cf42d9', '20150306 14:00:20.783', NULL)
 SET IDENTITY_INSERT [dbo].[cmsContentVersion] OFF
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1049, N'14db3dbb-e740-4672-9be8-41a9b5e293ee', '20150208 23:38:40.707', N'&lt;Page id="1049" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-02-01T16:03:19" updateDate="2015-02-08T23:38:40" nodeName="Umbraco-MVC" urlName="umbraco-mvc" path="-1,1049" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
   &lt;bodytext&gt;&lt;![CDATA[&lt;p&gt;&lt;strong&gt;Some Content&lt;/strong&gt;&lt;/p&gt;
@@ -591,6 +595,36 @@ INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VA
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
   &lt;idlang&gt;it&lt;/idlang&gt;
+&lt;/Page&gt;')
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1049, N'b03cf8fa-2ec1-4519-b227-a0c3d6238b2e', '20150306 00:14:49.503', N'&lt;Page id="1049" parentID="-1" level="1" creatorID="0" sortOrder="1" createDate="2015-02-01T16:03:19" updateDate="2015-03-06T00:14:49" nodeName="Umbraco-MVC-Modal" urlName="umbraco-mvc-modal" path="-1,1049" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
+  &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;Modal Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in an a modal dialog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="1" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="true" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
+  &lt;idlang&gt;it&lt;/idlang&gt;
+  &lt;navbar&gt;&lt;![CDATA[&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;]]&gt;&lt;/navbar&gt;
 &lt;/Page&gt;')
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1049, N'b6df194b-a841-4998-8d4c-a13164affc4d', '20150214 17:36:56.760', N'&lt;Page id="1049" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-02-01T16:03:19" updateDate="2015-02-14T17:36:56" nodeName="Umbraco-MVC" urlName="umbraco-mvc" path="-1,1049" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
   &lt;bodytext&gt;&lt;![CDATA[&lt;div class="page-header"&gt;
@@ -881,6 +915,36 @@ INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VA
 &lt;/ul&gt;
 &lt;/div&gt;]]&gt;&lt;/bodytext&gt;
 &lt;/Page&gt;')
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', '20150306 00:14:11.563', N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-03-06T00:14:11" nodeName="Umbraco-MVC-Page" urlName="umbraco-mvc-page" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
+  &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;In-Page Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;Macros are typed to provide and consume specific commands&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="0" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
+  &lt;navbar&gt;&lt;![CDATA[&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;]]&gt;&lt;/navbar&gt;
+&lt;/Page&gt;')
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1051, N'494d75a2-aed2-4b51-aa05-59914c9890a5', '20150215 11:09:41.440', N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-02-15T11:09:41" nodeName="Umbraco-MVC-Page" urlName="umbraco-mvc-page" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
   &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
 &lt;div class="panel-heading"&gt;
@@ -971,7 +1035,67 @@ INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VA
 &lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;]]&gt;&lt;/navbar&gt;
 &lt;/Page&gt;')
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1051, N'90e5aecb-9142-442c-a73f-010ff6989915', '20150305 23:49:39.197', N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-03-05T23:49:38" nodeName="Umbraco-MVC-Page" urlName="umbraco-mvc-page" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
+  &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;In-Page Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;Macros are typed to provide and consume specific commands&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="1" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
+  &lt;navbar&gt;&lt;![CDATA[&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;]]&gt;&lt;/navbar&gt;
+&lt;/Page&gt;')
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1051, N'97877309-a35c-4891-a270-e5b351544660', '20150214 17:55:59.130', N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-02-14T17:55:59" nodeName="Umbraco-MVC-FC" urlName="umbraco-mvc-fc" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page" /&gt;')
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId], [versionId], [timestamp], [xml]) VALUES (1051, N'f6590f18-534f-4016-a509-82f94d126b3f', '20150306 14:00:20.813', N'&lt;Page id="1051" parentID="-1" level="1" creatorID="0" sortOrder="2" createDate="2015-02-14T17:55:59" updateDate="2015-03-06T14:00:20" nodeName="Umbraco-MVC-Page" urlName="umbraco-mvc-page" path="-1,1051" isDoc="" nodeType="1046" creatorName="admin" writerName="admin" writerID="0" template="1048" nodeTypeAlias="Page"&gt;
+  &lt;bodytext&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;In-Page Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;Macros are typed to provide and consume specific commands&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="0" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;]]&gt;&lt;/bodytext&gt;
+  &lt;navbar&gt;&lt;![CDATA[&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;]]&gt;&lt;/navbar&gt;
+&lt;/Page&gt;')
 SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
 INSERT INTO [dbo].[cmsPropertyType] ([id], [dataTypeId], [contentTypeId], [propertyTypeGroupId], [Alias], [Name], [helpText], [sortOrder], [mandatory], [validationRegExp], [Description]) VALUES (35, -88, 1046, NULL, N'metakeywords', N'metaKeywords', NULL, 3, 0, N'', N'')
 INSERT INTO [dbo].[cmsPropertyType] ([id], [dataTypeId], [contentTypeId], [propertyTypeGroupId], [Alias], [Name], [helpText], [sortOrder], [mandatory], [validationRegExp], [Description]) VALUES (36, -89, 1046, NULL, N'script', N'script', NULL, 2, 0, N'', N'')
@@ -1647,6 +1771,130 @@ INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [proper
 &lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (192, 1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', 35, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (193, 1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', 36, NULL, NULL, NULL, N'')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (194, 1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', 37, NULL, NULL, NULL, N'&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;In-Page Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;Macros are typed to provide and consume specific commands&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="1" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (195, 1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', 38, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (196, 1051, N'14c6144b-bff0-47eb-bc72-d855183449c2', 39, NULL, NULL, NULL, N'&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (197, 1051, N'f6590f18-534f-4016-a509-82f94d126b3f', 35, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (198, 1051, N'f6590f18-534f-4016-a509-82f94d126b3f', 36, NULL, NULL, NULL, N'')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (199, 1051, N'f6590f18-534f-4016-a509-82f94d126b3f', 37, NULL, NULL, NULL, N'&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;In-Page Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;Macros are typed to provide and consume specific commands&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="0" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (200, 1051, N'f6590f18-534f-4016-a509-82f94d126b3f', 38, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (201, 1051, N'f6590f18-534f-4016-a509-82f94d126b3f', 39, NULL, NULL, NULL, N'&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (202, 1049, N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', 35, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (203, 1049, N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', 36, NULL, NULL, NULL, N'
+')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (204, 1049, N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', 37, NULL, NULL, NULL, N'&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;Modal Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in an a modal dialog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="1" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="true" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (205, 1049, N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', 38, NULL, NULL, N'it', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (206, 1049, N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', 39, NULL, NULL, NULL, N'&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (207, 1051, N'0afaac69-d72d-46ae-9781-4bb335cf42d9', 35, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (208, 1051, N'0afaac69-d72d-46ae-9781-4bb335cf42d9', 36, NULL, NULL, NULL, N'')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (209, 1051, N'0afaac69-d72d-46ae-9781-4bb335cf42d9', 37, NULL, NULL, NULL, N'&lt;div class="panel panel-default"&gt;
+&lt;div class="panel-heading"&gt;
+&lt;h3&gt;In-Page Macro&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="panel-body"&gt;In this Example:
+&lt;ul&gt;
+&lt;li&gt;Commands are sent via ajax between the macros&lt;/li&gt;
+&lt;li&gt;Macros are typed to provide and consume specific commands&lt;/li&gt;
+&lt;li&gt;the ToDoItem Macro is configured to be rendered in page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;?UMBRACO_MACRO popupmode="" isidvisible="0" macroAlias="Sample.ToDoList" /&gt;
+&lt;?UMBRACO_MACRO popupmode="false" macroAlias="Sample.ToDoItem" /&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;')
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (210, 1051, N'0afaac69-d72d-46ae-9781-4bb335cf42d9', 38, NULL, NULL, N'', NULL)
+INSERT INTO [dbo].[cmsPropertyData] ([id], [contentNodeId], [versionId], [propertytypeid], [dataInt], [dataDate], [dataNvarchar], [dataNtext]) VALUES (211, 1051, N'0afaac69-d72d-46ae-9781-4bb335cf42d9', 39, NULL, NULL, NULL, N'&lt;ul class="nav navbar-nav"&gt;
+&lt;li class="dropdown active"&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Samples &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;li class="active"&gt;&lt;a href="/Umbraco-MVC-Page"&gt;In-Page Macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Umbraco-MVC-Modal"&gt;Modal Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right"&gt;
+&lt;li class="active"&gt;&lt;a href="http://williamverdolini.github.io/Umbraco-CustomMacros.html" target="_blank"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://it.linkedin.com/in/williamverdolini/" target="_blank"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;')
 SET IDENTITY_INSERT [dbo].[cmsPropertyData] OFF
 SET IDENTITY_INSERT [dbo].[cmsTemplate] ON
 INSERT INTO [dbo].[cmsTemplate] ([pk], [nodeId], [master], [alias], [design]) VALUES (1, 1045, NULL, N'BootstrapMaster', N' ')
@@ -1742,8 +1990,11 @@ SET IDENTITY_INSERT [dbo].[cmsTemplate] OFF
 SET IDENTITY_INSERT [dbo].[cmsMacroProperty] ON
 INSERT INTO [dbo].[cmsMacroProperty] ([id], [macroPropertyHidden], [macroPropertyType], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (1, 1, 16, 1, 0, N'PopupMode', N'PopupMode')
 INSERT INTO [dbo].[cmsMacroProperty] ([id], [macroPropertyHidden], [macroPropertyType], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (2, 1, 16, 2, 0, N'PopupMode', N'PopupMode')
+INSERT INTO [dbo].[cmsMacroProperty] ([id], [macroPropertyHidden], [macroPropertyType], [macro], [macroPropertySortOrder], [macroPropertyAlias], [macroPropertyName]) VALUES (3, 1, 16, 1, 0, N'IsIdVisible', N'IsIdVisible')
 SET IDENTITY_INSERT [dbo].[cmsMacroProperty] OFF
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'01c28b3b-d617-402a-afe0-8991ffa2e2bc', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 18:24:34.703', 1048, NULL, 0)
+INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'0afaac69-d72d-46ae-9781-4bb335cf42d9', 1051, 1, 0, N'Umbraco-MVC-Page', NULL, NULL, '20150306 14:00:20.783', 1048, NULL, 1)
+INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'14c6144b-bff0-47eb-bc72-d855183449c2', 1051, 0, 0, N'Umbraco-MVC-Page', NULL, NULL, '20150305 23:49:38.893', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'14db3dbb-e740-4672-9be8-41a9b5e293ee', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150208 00:32:26.420', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'171329cc-d05b-4096-a295-d608a89b328e', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:40:02.683', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'1921fb74-e4d0-44a0-9f14-e63b41d8919c', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:38:19.650', 1048, NULL, 0)
@@ -1770,7 +2021,7 @@ INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUs
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'87d11238-21b1-4c04-ad6b-2fe932d394e8', 1051, 0, 0, N'Umbraco-MVC-Page', NULL, NULL, '20150214 17:59:47.410', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'8a28fb9c-b08f-4ebb-a5e8-f91cd2f8ea26', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150208 23:38:40.607', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'8b9ae9d6-9fcf-4165-ae5e-88f252a6da4b', 1049, 0, 0, N'Umbraco-MVC-Modal', NULL, NULL, '20150214 18:27:58.840', 1048, NULL, 0)
-INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'90e5aecb-9142-442c-a73f-010ff6989915', 1051, 1, 0, N'Umbraco-MVC-Page', NULL, NULL, '20150215 11:09:41.377', 1048, NULL, 1)
+INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'90e5aecb-9142-442c-a73f-010ff6989915', 1051, 0, 0, N'Umbraco-MVC-Page', NULL, NULL, '20150215 11:09:41.377', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'94c296f8-892a-4949-b3f8-d5bf3f177b79', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 18:18:47.980', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'97877309-a35c-4891-a270-e5b351544660', 1051, 0, 0, N'Umbraco-MVC-FC', NULL, NULL, '20150214 17:55:59.063', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'9d4afbac-ca26-4038-9ca1-fa75b2ab7806', 1049, 0, 0, N'Umbraco-MVC-Modal', NULL, NULL, '20150214 17:53:22.073', 1048, NULL, 0)
@@ -1778,14 +2029,16 @@ INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUs
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'a5392c13-c672-4dfc-a515-2fdcd1ef346c', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 17:52:45.387', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'ac87a19a-85a5-4c63-8e4a-4f29c6fd4139', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 18:00:14.443', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'ae7c5e07-fa74-4d37-b947-3d7fdad7646e', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:39:43.440', 1048, NULL, 0)
-INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'b03cf8fa-2ec1-4519-b227-a0c3d6238b2e', 1049, 1, 0, N'Umbraco-MVC-Modal', NULL, NULL, '20150214 18:28:36.747', 1048, NULL, 1)
+INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'b03cf8fa-2ec1-4519-b227-a0c3d6238b2e', 1049, 0, 0, N'Umbraco-MVC-Modal', NULL, NULL, '20150214 18:28:36.747', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'b0ee3e0a-5516-455a-9757-3a53633942fe', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 18:16:31.793', 1048, NULL, 0)
+INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'b5e4fefc-93e7-4b58-bb15-1419a27b492e', 1049, 1, 0, N'Umbraco-MVC-Modal', NULL, NULL, '20150306 00:14:49.477', 1048, NULL, 1)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'b6df194b-a841-4998-8d4c-a13164affc4d', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:34:18.027', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'b93d70fc-2df7-45cc-84b0-d4d2a4c1a122', 1050, 1, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 18:27:00.823', 1048, NULL, 1)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'c007f9e1-0763-4443-8d4c-95c3e4a9f74a', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 18:21:13.180', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'ebfe47dc-fe53-4cea-b493-c3e9d5f0d892', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:39:19.777', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'ed33d5e1-a9b3-42a6-ae11-7270ec7ff728', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:36:56.757', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'f2ee1d9f-6545-439d-be66-a1cf6eb6b123', 1050, 0, 0, N'Umbraco-MVC-Home', NULL, NULL, '20150214 17:54:49.427', 1048, NULL, 0)
+INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'f6590f18-534f-4016-a509-82f94d126b3f', 1051, 0, 0, N'Umbraco-MVC-Page', NULL, NULL, '20150306 00:14:11.480', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'f8a23dd0-22cc-4b0d-ae36-aa0923bf09f1', 1049, 0, 0, N'Umbraco-MVC-Modal', NULL, NULL, '20150214 17:52:29.157', 1048, NULL, 0)
 INSERT INTO [dbo].[cmsDocument] ([versionId], [nodeId], [published], [documentUser], [text], [releaseDate], [expireDate], [updateDate], [templateId], [alias], [newest]) VALUES (N'fce16510-ca1c-4f17-b484-5e9273c761dc', 1049, 0, 0, N'Umbraco-MVC', NULL, NULL, '20150214 17:42:14.377', 1048, NULL, 0)
 SET IDENTITY_INSERT [dbo].[cmsMacro] ON
@@ -1880,6 +2133,23 @@ INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeade
 INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (84, 0, 1049, '20150215 11:08:12.727', N'Open', N'')
 INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (85, 0, 1051, '20150215 11:08:28.653', N'Open', N'')
 INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (86, 0, 1051, '20150215 11:09:41.577', N'Publish', N'Save and Publish performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (87, 0, 1050, '20150224 14:04:50.287', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (88, 0, 1049, '20150224 14:11:16.577', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (89, 0, 1050, '20150224 14:12:03.750', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (90, 0, 1049, '20150224 14:12:04.943', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (91, 0, 1049, '20150305 23:47:51.283', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (92, 0, 1051, '20150305 23:47:59.240', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (93, 0, 1051, '20150305 23:49:13.507', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (94, 0, 1051, '20150305 23:49:39.490', N'Publish', N'Save and Publish performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (95, 0, 1051, '20150305 23:57:23.797', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (96, 0, 1051, '20150306 00:13:41.687', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (97, 0, 1051, '20150306 00:14:11.860', N'Publish', N'Save and Publish performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (98, 0, 1049, '20150306 00:14:32.740', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (99, 0, 1049, '20150306 00:14:49.543', N'Publish', N'Save and Publish performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (100, 0, 1051, '20150306 14:00:11.130', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (101, 0, 1051, '20150306 14:00:20.937', N'Publish', N'Save and Publish performed by user')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (102, 0, 1049, '20150306 14:00:25.683', N'Open', N'')
+INSERT INTO [dbo].[umbracoLog] ([id], [userId], [NodeId], [Datestamp], [logHeader], [logComment]) VALUES (103, 0, 1050, '20150306 14:00:29.060', N'Open', N'')
 SET IDENTITY_INSERT [dbo].[umbracoLog] OFF
 ALTER TABLE [dbo].[cmsLanguageText]
     ADD CONSTRAINT [FK_cmsLanguageText_cmsDictionary_id] FOREIGN KEY ([UniqueId]) REFERENCES [dbo].[cmsDictionary] ([id])
