@@ -12,7 +12,7 @@
         <table id="TodoListTable" class="table table-striped">
             <thead>
                 <tr>
-                    <th>#  @OrderButton("id")</th>
+                    @if (ViewBag.IsIdVisible) {<th>#  @OrderButton("id")</th>}
                     <th>Title @OrderButton("Title")</th>
                     <th>Description</th>
                     <th></th>
@@ -25,7 +25,7 @@
                     selCommand.ToDoListId = "'" + list.id + "'";
 
                     <tr>
-                        <td>@list.id</td>
+                        @if (ViewBag.IsIdVisible) {<td>@list.id</td>}
                         <td>@list.Title</td>
                         <td>@list.Description</td>
                         <td>

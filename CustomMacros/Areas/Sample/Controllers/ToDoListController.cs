@@ -21,8 +21,12 @@ namespace CustomMacros.Areas.Sample.Controllers
         ICommandProvider<OrderToDoListsCommand>,
         // Command Handler
         ICommandHandler<ArchiveToDoListCommand>,
-        ICommandHandler<OrderToDoListsCommand>
+        ICommandHandler<OrderToDoListsCommand>,
+        // Macro Properties
+        IToDoListMacroProperties
     {
+        public string IsIdVisible { get; set; }
+
         #region Constructors
         private readonly IToDoListWorker worker;
 
@@ -42,6 +46,7 @@ namespace CustomMacros.Areas.Sample.Controllers
         {
             ViewBag.SortedFieldname = "id";
             ViewBag.IsAscending = false;
+            ViewBag.IsIdVisible = Utilities.CastBool(IsIdVisible);
             return PartialView(worker.GetLists().OrderBy(list => list.id).ToList());
         }
 
@@ -58,6 +63,7 @@ namespace CustomMacros.Areas.Sample.Controllers
             bool isAscending = Utilities.CastBool(command.IsAscending);
             ViewBag.SortedFieldname = command.FieldName;
             ViewBag.IsAscending = !isAscending;
+            ViewBag.IsIdVisible = Utilities.CastBool(IsIdVisible);
             return PartialView(
                 isAscending ?
                 worker.GetLists().OrderBy(orderChoise[command.FieldName]).ToList() :

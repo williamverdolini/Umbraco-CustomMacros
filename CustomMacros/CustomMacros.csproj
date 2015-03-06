@@ -289,6 +289,7 @@
     <Compile Include="Areas\Sample\SampleAreaRegistration.cs" />
     <Compile Include="Areas\Sample\Services\DataBase.cs" />
     <Compile Include="Areas\Sample\Services\IDataBase.cs" />
+    <Compile Include="Areas\Sample\Worker\IToDoListMacroProperties.cs" />
     <Compile Include="Areas\Sample\Worker\IToDoListWorker.cs" />
     <Compile Include="Areas\Sample\Worker\ToDoListWorker.cs" />
     <Compile Include="Global.asax.cs">
@@ -322,6 +323,7 @@
     <Folder Include="Areas\Framework\Views\Shared\" />
     <Folder Include="Areas\Infrastructure\Views\Shared\" />
     <Folder Include="Areas\Sample\Views\Shared\" />
+    <Folder Include="Areas\Sample\Worker\MacroProperties\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
